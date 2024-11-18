@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Management App</title>
+    <title>Advanced Task Management System</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="root"></div>
+    <div class="controls">
+        <div>
+            <input type="text" id="task-input" placeholder="Enter a new task">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <button class="dark-mode-toggle btn" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+    </div>
+
+    <div class="task-container">
+        <div id="todo-column" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>To Do</h2>
+            <ul id="todo-list"></ul>
+        </div>
+        <div id="in-progress-column" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>In Progress</h2>
+            <ul id="in-progress-list"></ul>
+        </div>
+        <div id="done-column" class="task-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Done</h2>
+            <ul id="done-list"></ul>
+        </div>
+    </div>
+
+   <script src="./script.js">
+    
+   </script>
 </body>
 </html>
